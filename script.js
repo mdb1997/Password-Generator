@@ -4,7 +4,7 @@ var passResult = [];
 // Create variables for character criteria.
 var lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-var numbersChar = ['1','2','3','4','5','6','7','8','9','0'];
+var numberChar = ['1','2','3','4','5','6','7','8','9','0'];
 var specialChar = ['!','"','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[',']','^','_','{','}','|','~'];
 
 
@@ -41,4 +41,19 @@ function getPrompts() {
         alert("Password does not meet criteria. Must be between 8 and 128 characters.");
         return false;
     }
+    // Create confirms inside of an if statement for password chracters the user would like in their password.
+    // Use "concat" to combine the chosen characters into the passResult.
+    if (confirm("Do you want your password to have lowercase letters?")) {
+        passResult = passResult.concat(lowerCase);
+    }
+    if (confirm("Do you want your password to have uppercase letters?")) {
+        passResult = passResult.concat(upperCase);
+    }
+    if (confirm("Do you want your password to have numbers?")) {
+        passResult = passResult.concat(numberChar);
+    }
+    if (confirm("Do you want your password to have special characters?")) {
+        passResult = passResult.concat(specialChar);
+    }
+    return true;
 }
