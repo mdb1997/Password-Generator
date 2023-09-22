@@ -8,8 +8,6 @@ var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'
 var numberChar = ['1','2','3','4','5','6','7','8','9','0'];
 var specialChar = ['!','"','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[',']','^','_','{','}','|','~'];
 
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -17,21 +15,18 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 
-
 // Write password to the #password input.
 function writePassword() {
 
 // Call getPrompts function in a new variable to show true or false.
   var rightPrompt = getPrompts();
-  
+  var passwordText = document.querySelector("#password");
+
+// Write if statement for rightPrompt.
   if(rightPrompt) {
-      var password = generatePassword();
-      var passwordText = document.querySelector("#password");
-    
-      passwordText.value = password;
-
-  }
-
+      var newPassword = generatePassword();
+      passwordText.value = newPassword;
+    }
 }
 
 // Create a function for generatePassword.
