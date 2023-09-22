@@ -1,3 +1,9 @@
+// Create variables for the password's end result
+var charLength = 8;
+var passResult = [];
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
