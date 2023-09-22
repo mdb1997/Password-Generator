@@ -41,7 +41,11 @@ function generatePassword() {
     // Create a for loop.
     for(var i = 0; i < charLength; i++) {
         
+        // Use the math method to choose a random number for the password length.
+        var randomNumber = Math.floor(Math.random() * passResult.length);
+        password = password + passResult[randomNumber];
     }
+    return password;
 }
 
 // Create a function specifically for the prompts.
