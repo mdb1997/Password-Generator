@@ -36,7 +36,12 @@ function writePassword() {
 
 // Create a function for generatePassword.
 function generatePassword() {
-
+    var password = "";
+    
+    // Create a for loop.
+    for(var i = 0; i < charLength; i++) {
+        
+    }
 }
 
 // Create a function specifically for the prompts.
